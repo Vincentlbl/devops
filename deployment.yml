@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rentalservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rentalservice
+  template:
+    metadata:
+      labels:
+        app: rentalservice
+    spec:
+      containers:
+      - name: devsecops
+        image: devsecops
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
