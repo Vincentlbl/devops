@@ -16,5 +16,6 @@ spec:
       - name: devsecops
         image: devsecops
         imagePullPolicy: Never
+        restartPolicy: Always
         ports:
         - containerPort: 8080
